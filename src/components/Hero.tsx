@@ -6,7 +6,7 @@ const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.fridge
 const Hero = () => (
   <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
     {/* Glow effect */}
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none" />
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/[0.07] blur-[120px] pointer-events-none" />
 
     <div className="container relative flex flex-col items-center gap-12 md:flex-row md:gap-16">
       {/* Copy */}
