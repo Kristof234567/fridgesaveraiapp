@@ -1,4 +1,4 @@
-import { Camera, Clock, ChefHat } from "lucide-react";
+import { Camera, Clock, ChefHat, BookOpen } from "lucide-react";
 
 const features = [
   {
@@ -16,6 +16,12 @@ const features = [
     title: "Magic Recipes",
     description: "AI generates recipes from whatever's left in your fridge — no planning needed.",
   },
+  {
+    icon: BookOpen,
+    title: "Your Own Recipes",
+    description:
+      "Upload your own recipes and keep everything in one place. Save time — no more searching through drawers or old notebooks. Many people write recipes on paper: digitize them for a cleaner, more readable collection, and save trees while you're at it. More trees = more oxygen.",
+  },
 ];
 
 const WhySection = () => (
@@ -28,7 +34,7 @@ const WhySection = () => (
         Everything you need to keep your kitchen organized and your wallet happy.
       </p>
 
-      <div className="mt-14 grid gap-8 sm:grid-cols-3">
+      <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f) => (
           <div
             key={f.title}
