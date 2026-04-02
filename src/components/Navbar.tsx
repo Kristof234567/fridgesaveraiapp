@@ -1,7 +1,5 @@
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/logofridge.png";
-
-const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.fridgesaver.ai";
+import StoreBadges from "@/components/StoreBadges";
 
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md shadow-sm">
@@ -14,11 +12,7 @@ const Navbar = () => (
         <a href="/legal" className="hidden text-sm text-muted-foreground hover:text-foreground transition-colors sm:inline-block">
           Legal
         </a>
-        <Button variant="navCta" size="sm" asChild>
-          <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
-            Pre-register
-          </a>
-        </Button>
+        <StoreBadges badgeHeight="h-8" />
       </div>
     </div>
   </nav>
