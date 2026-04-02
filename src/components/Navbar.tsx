@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.fridgesaver.ai";
 
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-md">
+  <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/90 backdrop-blur-md shadow-sm">
     <div className="container flex h-16 items-center justify-between">
       <a href="/" className="flex items-center gap-2">
         <Leaf className="h-6 w-6 text-primary" />
