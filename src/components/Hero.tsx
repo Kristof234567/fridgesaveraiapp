@@ -7,13 +7,13 @@ const Hero = () => (
 
     <div className="container relative flex flex-col items-center gap-12 md:flex-row md:gap-16">
       <div className="flex-1 text-center md:text-left animate-fade-in-up">
-        <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          Stop wasting food.
+        <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
+          Stop throwing money
           <br />
-          <span className="text-gradient-primary">Start saving money.</span>
+          <span className="text-gradient-primary">in the trash.</span>
         </h1>
         <p className="mt-6 max-w-lg text-lg text-muted-foreground mx-auto md:mx-0">
-          Scan your groceries, track expiry dates, and get AI-powered recipes from what's already in your fridge.
+          Save $325+ every month by tracking your food waste with AI.
         </p>
 
         <div className="mt-8 flex flex-col items-center gap-4 md:items-start">
