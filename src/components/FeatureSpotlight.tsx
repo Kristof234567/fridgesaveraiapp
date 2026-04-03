@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import featureImg from "@/assets/feature-recipes.png";
 
-const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.fridgesaver.ai";
+const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.fridgesaverai.app";
 
 const FeatureSpotlight = () => (
   <section className="py-20 md:py-28 bg-card/50">
