@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhySection from "@/components/WhySection";
-import BentoGrid from "@/components/BentoGrid";
 import Testimonials from "@/components/Testimonials";
 import CtaBanner from "@/components/CtaBanner";
 import Footer from "@/components/Footer";
@@ -11,7 +10,6 @@ const Index = () => (
     <Navbar />
     <Hero />
     <WhySection />
-    <BentoGrid />
     <Testimonials />
     <CtaBanner />
     <Footer />

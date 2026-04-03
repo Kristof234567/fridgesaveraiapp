@@ -5,6 +5,7 @@ const features = [
     icon: Camera,
     title: "Instant Food Scanning",
     description: "Point your camera at groceries and let AI identify items and log them in seconds.",
+    hasScanAnimation: true,
   },
   {
     icon: Clock,
@@ -45,6 +46,13 @@ const WhySection = () => (
             </div>
             <h3 className="text-lg font-semibold text-foreground">{f.title}</h3>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.description}</p>
+            {f.hasScanAnimation && (
+              <div className="mt-4 relative rounded-2xl bg-muted/50 h-28 flex items-center justify-center overflow-hidden">
+                <div className="absolute inset-2 border-2 border-primary/40 rounded-xl" />
+                <div className="absolute inset-2 border-t-2 border-primary animate-scan" />
+                <span className="text-xs font-medium text-primary z-10">Scanning...</span>
+              </div>
+            )}
           </div>
         ))}
       </div>

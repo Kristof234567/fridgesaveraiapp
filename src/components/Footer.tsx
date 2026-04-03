@@ -4,11 +4,12 @@ import StoreBadges from "@/components/StoreBadges";
 const Footer = () => (
   <footer className="py-10" style={{ backgroundColor: 'hsl(var(--footer-bg))', color: 'hsl(var(--footer-fg))' }}>
     <div className="container flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-      <div className="flex flex-col items-center sm:items-start gap-4">
+      <div className="flex flex-col items-center sm:items-start gap-3">
         <div className="flex items-center gap-2">
           <img src={logo} alt="FridgeSaver AI" className="h-6 w-6 rounded" />
           <span className="text-sm font-semibold" style={{ color: 'hsl(0 0% 95%)' }}>FridgeSaver AI</span>
         </div>
+        <p className="text-xs font-medium" style={{ color: 'hsl(0 0% 70%)' }}>Download FridgeSaver AI</p>
         <StoreBadges badgeHeight="h-9" />
       </div>
 
