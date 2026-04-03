@@ -1,63 +1,71 @@
-import { Star } from "lucide-react";
-
 const testimonials = [
   {
-    name: "John Doe",
-    username: "@johndoe",
-    text: "Saved $120 in my first month. The AI scan is pure magic.",
-    avatar: "JD",
+    name: "pree.palmer",
+    text: "im ngl I've saved so much money with it, doesn't need to be exact it's pretty decent",
+    avatar: "PP",
+    bgColor: "bg-red-100 text-red-600",
   },
   {
-    name: "Sarah Smith",
-    username: "@sarah_smith",
-    text: "Finally, I don't have to guess what's rotting in my fridge.",
-    avatar: "SS",
+    name: "Ordinary Tony",
+    text: "IVE BEEN TRACKING MY FOOD WASTE FOR A YEAR STRAIGHT W APP FR 👏👏👏",
+    avatar: "OT",
+    bgColor: "bg-amber-100 text-amber-700",
   },
   {
-    name: "Mike Finance",
-    username: "@mike_finance",
-    text: "The profit tracker is so addictive. It's like a game for my wallet.",
-    avatar: "MF",
+    name: "greenkitchen2025",
+    text: "I love your app it helps me keep track of my food without overthinking everything and gives me smart recipes plus it's so aesthetic 💖",
+    avatar: "GK",
+    bgColor: "bg-pink-100 text-pink-600",
+  },
+  {
+    name: "Mathias",
+    text: "I started to use it yesterday and im already giving it 5⭐",
+    avatar: "M",
+    bgColor: "bg-yellow-100 text-yellow-700",
+  },
+  {
+    name: "Ms Nsofor",
+    text: "For people that want to stop wasting food @fridgesaverai is the app for you 👀🔥",
+    avatar: "D",
+    bgColor: "bg-orange-100 text-orange-600",
   },
 ];
 
 const Testimonials = () => (
   <section className="py-20 md:py-28">
     <div className="container">
-      <div className="flex flex-col items-center gap-6">
-        {/* Rating badge */}
-        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-4 py-2">
-          <div className="flex">
-            {[...Array(5)].map((_, i) => (
-              <Star
-                key={i}
-                className={`h-4 w-4 ${i < 5 ? "fill-primary text-primary" : "text-muted-foreground"}`}
-              />
-            ))}
-          </div>
-          <span className="text-sm font-semibold text-foreground">4.9 / 5</span>
-        </div>
+      <h2 className="text-3xl font-bold sm:text-4xl text-center mb-14">
+        Thousands of users talk about us
+      </h2>
 
-        <h2 className="text-3xl font-bold sm:text-4xl text-center">
-          What our users say
-        </h2>
-      </div>
-
-      {/* Masonry grid */}
-      <div className="mt-14 columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-        {testimonials.map((t) => (
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {testimonials.slice(0, 3).map((t) => (
           <div
-            key={t.username}
-            className="break-inside-avoid rounded-3xl border border-border bg-card p-6 transition-shadow hover:glow-box"
+            key={t.name}
+            className="rounded-3xl border border-border bg-card p-6 transition-shadow hover:glow-box"
           >
             <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+              <div className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold ${t.bgColor}`}>
                 {t.avatar}
               </div>
-              <div>
-                <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                <p className="text-xs text-muted-foreground">{t.username}</p>
+              <p className="text-sm font-bold text-foreground">{t.name}</p>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed">"{t.text}"</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-5 grid gap-5 sm:grid-cols-2 max-w-3xl mx-auto">
+        {testimonials.slice(3).map((t) => (
+          <div
+            key={t.name}
+            className="rounded-3xl border border-border bg-card p-6 transition-shadow hover:glow-box"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className={`flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold ${t.bgColor}`}>
+                {t.avatar}
               </div>
+              <p className="text-sm font-bold text-foreground">{t.name}</p>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">"{t.text}"</p>
           </div>

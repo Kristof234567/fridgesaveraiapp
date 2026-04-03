@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const ManageSubscription = () => {
   const [email, setEmail] = useState("");
@@ -21,8 +22,8 @@ const ManageSubscription = () => {
       <main className="pt-32 pb-20">
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-md text-center">
-            <h1 className="text-3xl font-bold text-foreground">Manage Subscription</h1>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
+            <h1 className="text-2xl font-bold text-foreground">Manage Subscription</h1>
+            <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
               If you purchased your subscription on the web, please enter the email address you subscribed with in order to change your subscription.
             </p>
 
@@ -34,16 +35,23 @@ const ManageSubscription = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-4">
+              <form onSubmit={handleSubmit} className="mt-8 flex flex-col gap-3 text-left">
+                <Label htmlFor="email" className="text-sm font-medium text-primary">
+                  Email
+                </Label>
                 <Input
+                  id="email"
                   type="email"
-                  placeholder="you@example.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="h-12 text-base"
+                  className="h-12 text-base rounded-lg border-border"
                 />
-                <Button type="submit" variant="cta" size="lg" className="w-full">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full mt-2 bg-foreground text-background hover:bg-foreground/90 rounded-full font-semibold"
+                >
                   Send
                 </Button>
               </form>
