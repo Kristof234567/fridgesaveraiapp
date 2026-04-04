@@ -1,4 +1,9 @@
 import { Camera, Clock, ChefHat, BookOpen } from "lucide-react";
+import expiryImg1 from "@/assets/screenshot-expiry-1.jpg";
+import expiryImg2 from "@/assets/screenshot-expiry-2.jpg";
+import recipeImg1 from "@/assets/screenshot-recipe-1.jpg";
+import recipeImg2 from "@/assets/screenshot-recipe-2.jpg";
+import { useState } from "react";
 
 const features = [
   {
@@ -11,11 +16,13 @@ const features = [
     icon: Clock,
     title: "Expiry Date Tracking",
     description: "See what's expiring soon at a glance. Get notified before food goes to waste.",
+    screenshots: [expiryImg1, expiryImg2],
   },
   {
     icon: ChefHat,
     title: "Magic Recipes",
     description: "AI generates recipes from whatever's left in your fridge — no planning needed.",
+    screenshots: [recipeImg1, recipeImg2],
   },
   {
     icon: BookOpen,
@@ -24,6 +31,35 @@ const features = [
       "Upload your own recipes and keep everything in one place. Save time — no more searching through drawers or old notebooks. Many people write recipes on paper: digitize them for a cleaner, more readable collection, and save trees while you're at it. More trees = more oxygen.",
   },
 ];
+
+const ScreenshotCarousel = ({ images }: { images: string[] }) => {
+  const [active, setActive] = useState(0);
+  return (
+    <div className="mt-4">
+      <div className="rounded-2xl overflow-hidden bg-muted/30">
+        <img
+          src={images[active]}
+          alt="App screenshot"
+          className="w-full h-48 object-cover object-top"
+          loading="lazy"
+        />
+      </div>
+      {images.length > 1 && (
+        <div className="flex justify-center gap-2 mt-3">
+          {images.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActive(i)}
+              className={`h-2 rounded-full transition-all ${
+                i === active ? "w-6 bg-primary" : "w-2 bg-muted-foreground/30"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
 const WhySection = () => (
   <section className="py-20 md:py-28">
@@ -53,6 +89,7 @@ const WhySection = () => (
                 <span className="text-xs font-medium text-primary z-10">Scanning...</span>
               </div>
             )}
+            {f.screenshots && <ScreenshotCarousel images={f.screenshots} />}
           </div>
         ))}
       </div>
