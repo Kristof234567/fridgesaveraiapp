@@ -18,7 +18,7 @@ const Hero = () => (
 
         <div className="mt-8 flex flex-col items-center gap-4 md:items-start">
           <StoreBadges />
-          <span className="text-sm text-muted-foreground">Free · Available on Google Play</span>
+          
         </div>
       </div>
 

@@ -1,3 +1,4 @@
+import { Mail } from "lucide-react";
 import logo from "@/assets/logofridge.png";
 import StoreBadges from "@/components/StoreBadges";
 
@@ -13,10 +14,17 @@ const Footer = () => (
         <StoreBadges badgeHeight="h-9" />
       </div>
 
-      <div className="flex gap-6 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
-        <a href="/legal" className="hover:text-primary transition-colors">Privacy Policy</a>
-        <a href="/legal" className="hover:text-primary transition-colors">Terms of Use</a>
-        <a href="mailto:contact@fridgesaver.ai" className="hover:text-primary transition-colors">Contact</a>
+      <div className="flex flex-col items-center gap-4">
+        <div className="flex gap-6 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
+          <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="/terms" className="hover:text-primary transition-colors">Terms of Use</a>
+        </div>
+        <div className="flex items-center gap-2 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
+          <Mail className="h-4 w-4 text-primary" />
+          <a href="mailto:FridgeSaverAI@protonmail.com" className="hover:text-primary transition-colors">
+            FridgeSaverAI@protonmail.com
+          </a>
+        </div>
       </div>
 
       <p className="text-xs" style={{ color: 'hsl(0 0% 50%)' }}>

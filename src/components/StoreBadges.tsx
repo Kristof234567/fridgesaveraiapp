@@ -10,7 +10,7 @@ interface StoreBadgesProps {
 
 const StoreBadges = ({ className = "", badgeHeight = "h-11" }: StoreBadgesProps) => (
   <div className={`flex items-center gap-3 ${className}`}>
-    <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">
+    <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer nofollow">
       <img src={googlePlayBadge} alt="Get it on Google Play" className={`${badgeHeight} w-auto`} />
     </a>
     <div className="relative">

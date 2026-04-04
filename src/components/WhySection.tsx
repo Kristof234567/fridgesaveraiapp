@@ -29,7 +29,7 @@ const WhySection = () => (
   <section className="py-20 md:py-28">
     <div className="container">
       <h2 className="text-center text-3xl font-bold sm:text-4xl">
-        Why <span className="text-gradient-primary">FridgeSaver AI</span>?
+        Why Choose <span className="text-gradient-primary">FridgeSaver AI</span>?
       </h2>
       <p className="mt-4 text-center text-muted-foreground max-w-2xl mx-auto">
         Everything you need to keep your kitchen organized and your wallet happy.
