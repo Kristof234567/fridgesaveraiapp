@@ -17,8 +17,6 @@ const Terms = () => (
           <h3 className="text-lg font-medium text-foreground mt-4 mb-2">1.1. Parties</h3>
           <p>These Terms of Use ("Terms") govern your use of the FridgeSaver AI mobile application and related services (the "Service").</p>
           <ul className="mt-2 space-y-1">
-            <li><strong className="text-foreground">Provider / contracting party:</strong> [Legal name – company or sole trader]</li>
-            <li><strong className="text-foreground">Registered address:</strong> [Full address]</li>
             <li><strong className="text-foreground">Contact:</strong>{" "}
               <a href="mailto:FridgeSaverAI@protonmail.com" className="text-primary hover:underline">FridgeSaverAI@protonmail.com</a>
             </li>
