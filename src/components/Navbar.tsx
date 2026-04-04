@@ -9,8 +9,8 @@ const Navbar = () => (
         <span className="text-lg font-bold text-foreground">FridgeSaver AI</span>
       </a>
       <div className="flex items-center gap-4">
-        <a href="/legal" className="hidden text-sm text-muted-foreground hover:text-foreground transition-colors sm:inline-block">
-          Legal
+        <a href="/" className="hidden text-sm text-muted-foreground hover:text-foreground transition-colors sm:inline-block">
+          Home
         </a>
         <a
           href="/manage-subscription"

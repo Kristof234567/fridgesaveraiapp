@@ -21,7 +21,7 @@ const testimonials = [
     avatar: avatar3,
   },
   {
-    name: "Mathias",
+    name: "Daniel",
     text: "I started to use it yesterday and im already giving it 5⭐",
     avatar: avatar4,
   },
