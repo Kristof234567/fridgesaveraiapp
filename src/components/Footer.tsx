@@ -1,11 +1,12 @@
 import { Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logofridge.png";
 import StoreBadges from "@/components/StoreBadges";
 
 const Footer = () => (
   <footer className="py-10" style={{ backgroundColor: 'hsl(var(--footer-bg))', color: 'hsl(var(--footer-fg))' }}>
     <div className="container flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-      <div className="flex flex-col items-center sm:items-start gap-3">
+      <div className="flex flex-col items-center gap-3 sm:items-start">
         <div className="flex items-center gap-2">
           <img src={logo} alt="FridgeSaver AI" className="h-6 w-6 rounded" />
           <span className="text-sm font-semibold" style={{ color: 'hsl(0 0% 95%)' }}>FridgeSaver AI</span>
@@ -16,12 +17,12 @@ const Footer = () => (
 
       <div className="flex flex-col items-center gap-4">
         <div className="flex gap-6 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
-          <a href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="/terms" className="hover:text-primary transition-colors">Terms of Use</a>
+          <Link to="/privacy" className="transition-colors hover:text-primary">Privacy Policy</Link>
+          <Link to="/terms" className="transition-colors hover:text-primary">Terms of Use</Link>
         </div>
         <div className="flex items-center gap-2 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
           <Mail className="h-4 w-4 text-primary" />
-          <a href="mailto:FridgeSaverAI@protonmail.com" className="hover:text-primary transition-colors">
+          <a href="mailto:FridgeSaverAI@protonmail.com" className="transition-colors hover:text-primary">
             FridgeSaverAI@protonmail.com
           </a>
         </div>
