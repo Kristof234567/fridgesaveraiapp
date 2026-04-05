@@ -41,7 +41,7 @@ const Hero = () => (
             <span className="text-gradient-primary">in the trash.</span>
           </h1>
           <p className="mt-6 max-w-lg text-lg text-muted-foreground mx-auto md:mx-0">
-            Save $325+ every month by tracking your food waste with AI.
+            Save $2000+ a year by using AI to rescue your expiring food. It's like a tax refund for your kitchen.
           </p>
 
           <div className="mt-8 flex flex-col items-center gap-4 md:items-start">
