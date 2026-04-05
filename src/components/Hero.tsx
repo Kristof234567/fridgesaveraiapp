@@ -4,13 +4,27 @@ import StoreBadges from "@/components/StoreBadges";
 const Hero = () => (
   <>
     {/* Meet FridgeSaver AI intro */}
-    <section className="pt-28 pb-8 md:pt-36 md:pb-12 text-center">
-      <div className="container max-w-3xl">
-        <h2 className="text-2xl font-bold tracking-tight sm:text-3xl text-foreground">
+    <section className="pt-28 pb-8 md:pt-36 md:pb-12 text-center px-6">
+      <div className="mx-auto max-w-[42rem]">
+        <h2
+          className="font-bold text-foreground"
+          style={{
+            fontSize: 'clamp(2rem, 5vw, 3.25rem)',
+            lineHeight: 1.1,
+            letterSpacing: '-0.02em',
+          }}
+        >
           Meet FridgeSaver AI
         </h2>
-        <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-          FridgeSaver AI lets you log what's in your fridge or pantry — by photo or manually — track expiry dates, and get AI-generated recipes from what you already have. Less food goes to waste, your stock stays clear, and you save time and money on cooking and shopping decisions.
+        <p
+          className="mt-3.5 mx-auto text-muted-foreground"
+          style={{
+            fontSize: 'clamp(1rem, 2.2vw, 1.25rem)',
+            lineHeight: 1.6,
+            maxWidth: '38rem',
+          }}
+        >
+          Know what's in your fridge, use it before it expires, and get AI recipes from ingredients you already have.
         </p>
       </div>
     </section>
