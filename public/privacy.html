@@ -15,41 +15,47 @@
         .policy-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
         .policy-content li { margin-bottom: 0.5rem; }
     </style>
+    <script>
+        // Detect base path for GitHub Pages or local
+        const base = document.querySelector('base')?.href
+            || (location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp/' : '/');
+        function appUrl(path) { return base.replace(/\/$/, '') + path; }
+    </script>
 </head>
 <body class="bg-white">
 
-    <nav class="fixed top-0 w-full h-20 bg-white border-b border-gray-100 z-50">
+    <nav class="fixed top-0 w-full h-16 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
-            <a href="/" class="flex items-center gap-3">
-                <img src="/logofridge.png" alt="FS" class="w-8 h-8 rounded-lg bg-black p-1 shadow-sm">
-                <span class="font-bold text-xl text-gray-900 tracking-tight">FridgeSaver AI</span>
+            <a id="nav-logo" href="/" class="flex items-center gap-2">
+                <img src="./logofridge.png" alt="FridgeSaver AI" class="h-8 w-8 rounded">
+                <span class="font-bold text-lg text-gray-900">FridgeSaver AI</span>
             </a>
-            <div class="flex items-center gap-8">
-                <a href="/" class="text-gray-500 hover:text-gray-900 text-sm font-medium">Home</a>
-                <a href="/manage-subscription" class="px-5 py-2.5 border border-gray-200 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-all">Manage Subscription</a>
+            <div class="flex items-center gap-4">
+                <a id="nav-home" href="/" class="hidden sm:inline-block text-sm text-gray-500 hover:text-gray-900 transition-colors">Home</a>
+                <a id="nav-manage" href="/manage-subscription" class="hidden sm:inline-flex items-center rounded-md border border-gray-200 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 transition-colors">Manage Subscription</a>
                 <div class="flex items-center gap-3">
-                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-9">
+                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank" rel="noopener noreferrer nofollow">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-8">
                     </a>
-                    <div class="flex flex-col">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-9 opacity-30 grayscale">
-                        <span class="text-[10px] text-gray-400 self-center">Coming Soon</span>
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-8 opacity-60">
+                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-400 whitespace-nowrap">Coming Soon</span>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto pt-32 pb-20 px-6">
+    <main class="max-w-4xl mx-auto pt-28 pb-20 px-6">
         <h1 class="text-3xl font-bold text-gray-900 mb-2">Privacy Policy – FridgeSaver AI</h1>
         <p class="text-sm text-gray-400 mb-10 font-medium tracking-wide uppercase">Effective: 4 April 2026 · Last updated: 6 April 2026</p>
 
         <div class="google-box p-6 rounded-2xl mb-12 shadow-sm">
-            <h3 class="text-blue-900 font-bold text-lg mb-4 flex items-center gap-2 text-[17px]">
+            <h3 class="text-blue-900 font-bold text-lg mb-4 flex items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                 Google API Services User Data Disclosure
             </h3>
-            <div class="space-y-4 text-[14px] text-blue-800/90 leading-relaxed">
+            <div class="space-y-4 text-sm text-blue-800/90 leading-relaxed">
                 <p>To comply with Google API Services User Data Policy, we clearly disclose our data practices regarding Google user data:</p>
                 <p><strong>1. Data Accessed:</strong> Our application accesses your Google account name (display name), Google email address, and Google user ID via OAuth 2.0.</p>
                 <p><strong>2. Data Usage:</strong> This data is used solely for authentication, secure account creation, and identifying your user account within our system. We <strong>do not</strong> use Google user data for marketing, advertising, or any third-party profiling.</p>
@@ -60,7 +66,6 @@
         </div>
 
         <div class="policy-content text-[15px] text-gray-600 leading-relaxed">
-            
             <section>
                 <h2>1. Introduction and scope</h2>
                 <p>This Privacy Policy ("Policy") describes how we collect, use, store, share, and protect personal data when you use the FridgeSaver AI mobile application, any related web interfaces, and the backend systems that operate the service (together, the "Service").</p>
@@ -191,41 +196,55 @@
         </div>
     </main>
 
-    <footer class="bg-[#030712] text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
-            <div class="space-y-6">
-                <div class="flex items-center gap-3">
-                    <img src="/logofridge.png" alt="FS" class="w-6 h-6 rounded bg-[#111827] p-1 border border-gray-800">
-                    <span class="font-bold text-lg">FridgeSaver AI</span>
+    <footer class="bg-[#030712] text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <div class="flex flex-col items-center gap-3 sm:items-start">
+                <div class="flex items-center gap-2">
+                    <img src="./logofridge.png" alt="FridgeSaver AI" class="h-6 w-6 rounded">
+                    <span class="text-sm font-semibold text-gray-100">FridgeSaver AI</span>
                 </div>
-                <div class="space-y-3 text-sm">
-                    <p class="text-gray-400 font-medium">Download FridgeSaver AI</p>
-                    <div class="flex flex-col items-start gap-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10">
-                        </a>
-                        <div class="flex flex-col items-center">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-10 opacity-30 grayscale">
-                            <span class="text-[10px] text-gray-600 font-medium mt-1 uppercase tracking-tighter">Coming Soon</span>
-                        </div>
+                <p class="text-xs font-medium text-gray-500">Download FridgeSaver AI</p>
+                <div class="flex items-center gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank" rel="noopener noreferrer nofollow">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-9 w-auto">
+                    </a>
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-9 w-auto opacity-60">
+                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 whitespace-nowrap">Coming Soon</span>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col gap-4 text-sm font-medium">
-                <a href="/privacy.html" class="text-gray-100 hover:text-white transition-colors">Privacy Policy</a>
-                <a href="/terms" class="text-gray-400 hover:text-white transition-colors">Terms of Use</a>
-                <div class="mt-4 flex items-center gap-2 text-gray-100">
-                    <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    <span>FridgeSaverAI@protonmail.com</span>
+            <div class="flex flex-col items-center gap-3 sm:items-end">
+                <div class="flex gap-6 text-sm">
+                    <a href="./privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                    <a id="footer-terms" href="/terms" class="text-gray-300 hover:text-white transition-colors">Terms of Use</a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <a href="mailto:FridgeSaverAI@protonmail.com" class="text-gray-300 hover:text-white transition-colors">FridgeSaverAI@protonmail.com</a>
                 </div>
             </div>
 
-            <div class="text-gray-500 text-sm self-end">
-                © 2026 FridgeSaver AI. All rights reserved.
-            </div>
+            <p class="text-xs text-gray-600">© 2026 FridgeSaver AI. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        // Fix links for GitHub Pages subpath
+        (function() {
+            var basePath = location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp' : '';
+            var links = {
+                'nav-logo': '/',
+                'nav-home': '/',
+                'nav-manage': '/manage-subscription',
+                'footer-terms': '/terms'
+            };
+            Object.keys(links).forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) el.href = basePath + links[id];
+            });
+        })();
+    </script>
 </body>
 </html>
