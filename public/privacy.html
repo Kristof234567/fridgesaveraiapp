@@ -4,189 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy – FridgeSaver AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #374151; max-width: 850px; margin: 40px auto; padding: 0 20px; background-color: #ffffff; }
-        h1 { color: #111827; font-size: 2.25rem; font-weight: 700; margin-bottom: 0.5rem; }
-        h2 { color: #111827; font-size: 1.5rem; font-weight: 600; margin-top: 2rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.5rem; }
-        h3 { color: #111827; font-size: 1.25rem; font-weight: 500; margin-top: 1.5rem; margin-bottom: 0.5rem; }
-        p { margin-bottom: 1rem; }
-        .effective-date { color: #6b7280; font-size: 0.875rem; margin-bottom: 2.5rem; }
-        .google-compliance-box { background-color: #f0f7ff; border: 2px solid #2563eb; border-radius: 0.75rem; padding: 1.5rem; margin: 2rem 0; }
-        .google-compliance-box h3 { margin-top: 0; color: #1e40af; border: none; }
-        table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.875rem; }
-        th, td { border: 1px solid #e5e7eb; padding: 0.75rem; text-align: left; }
-        th { background-color: #f3f4f6; font-weight: 600; }
-        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
-        li { margin-bottom: 0.5rem; }
-        a { color: #2563eb; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e5e7eb; color: #6b7280; font-size: 0.875rem; text-align: center; }
-        .contact-link { font-weight: 600; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .google-disclosure { background-color: #f0f7ff; border: 2px solid #2563eb; border-left-width: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
+        th, td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
+        th { background-color: #f8fafc; font-weight: 600; }
     </style>
 </head>
-<body>
+<body class="bg-white text-slate-900">
 
-    <h1>Privacy Policy – FridgeSaver AI</h1>
-    <p class="effective-date">Effective: 4 April 2026 · Last updated: 6 April 2026</p>
+    <nav class="fixed top-0 w-full h-20 bg-white/80 backdrop-blur-md border-b border-slate-100 z-50 flex items-center">
+        <div class="container mx-auto px-6 max-w-6xl flex justify-between items-center">
+            <a href="/" class="flex items-center gap-2 no-underline">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">F</span>
+                </div>
+                <span class="font-bold text-xl tracking-tight text-slate-900">FridgeSaver AI</span>
+            </a>
+        </div>
+    </nav>
 
-    <div class="google-compliance-box">
-        <h3>Google API Services User Data Disclosure</h3>
-        <p>To comply with Google API Services User Data Policy, we clearly disclose our data practices regarding Google user data:</p>
-        
-        <p><strong>1. Data Accessed:</strong> Our application accesses your Google account name (display name), Google email address, and Google user ID via OAuth 2.0.</p>
-        
-        <p><strong>2. Data Usage:</strong> This data is used solely for authentication, secure account creation, and identifying your user account within our system. We <strong>do not</strong> use Google user data for marketing, advertising, or any third-party profiling.</p>
-        
-        <p><strong>3. Data Sharing:</strong> Your Google data is shared only with <strong>Google Firebase</strong> (Authentication provider) and <strong>RevenueCat</strong> (Subscription management). No other third parties receive your Google user data.</p>
-        
-        <p><strong>4. Data Storage & Protection:</strong> Data is stored in <strong>Firebase Firestore</strong> (encrypted at rest) and transmitted via <strong>HTTPS/TLS encryption</strong>. Access is restricted to authenticated requests only.</p>
-        
-        <p><strong>5. Data Retention & Deletion:</strong> Data is retained until account deletion. Users can delete their account in-app (<em>Profile → Settings → Delete Account</em>) or by contacting FridgeSaverAI@protonmail.com. All data is permanently deleted within 30 days of the request.</p>
-    </div>
+    <main class="container mx-auto px-6 pt-32 pb-20 max-w-3xl">
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
+        <p class="text-sm text-slate-500 mb-10">Effective: 4 April 2026 · Last updated: 6 April 2026</p>
 
-    <section>
-        <h2>1. Introduction and scope</h2>
-        <p>This Privacy Policy ("Policy") describes how we collect, use, store, share, and protect personal data when you use the FridgeSaver AI mobile application, any related web interfaces, and the backend systems that operate the service (together, the "Service").</p>
-        <p>By using the Service, you acknowledge that your personal data will be processed as described in this Policy, unless applicable law requires otherwise.</p>
-    </section>
+        <div class="google-disclosure p-6 rounded-xl mb-12 shadow-sm">
+            <h3 class="text-blue-800 font-bold text-lg mb-3">Google API Services User Data Disclosure</h3>
+            <div class="space-y-4 text-sm text-blue-900 leading-relaxed">
+                <p><strong>1. Data Accessed:</strong> Our application accesses your Google account name, email address, and Google user ID via OAuth 2.0.</p>
+                <p><strong>2. Data Usage:</strong> This data is used solely for authentication and secure account creation. We <strong>do not</strong> use Google user data for marketing, advertising, or profiling.</p>
+                <p><strong>3. Data Sharing:</strong> Your Google data is shared only with <strong>Google Firebase</strong> and <strong>RevenueCat</strong>. No other third parties receive this data.</p>
+                <p><strong>4. Data Storage:</strong> Stored in <strong>Firebase Firestore</strong> (encrypted at rest) and transmitted via <strong>HTTPS/TLS encryption</strong>.</p>
+                <p><strong>5. Deletion:</strong> Users can delete their account in-app or by contacting FridgeSaverAI@protonmail.com. All data is deleted within 30 days.</p>
+            </div>
+        </div>
 
-    <section>
-        <h2>2. Data controller</h2>
-        <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="contact-link">FridgeSaverAI@protonmail.com</a></p>
-        <p><strong>Website:</strong> www.fridgesaverai.com</p>
-        <p>Where we use processors (see Section 8), they process data on our instructions and do not become controllers towards you, unless applicable law treats them as independent controllers.</p>
-    </section>
+        <div class="space-y-8 text-slate-600">
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Introduction and scope</h2>
+                <p>This Privacy Policy ("Policy") describes how we collect, use, store, share, and protect personal data when you use the FridgeSaver AI mobile application, any related web interfaces, and the backend systems that operate the service (together, the "Service").</p>
+                <p class="mt-2">By using the Service, you acknowledge that your personal data will be processed as described in this Policy, unless applicable law requires otherwise.</p>
+            </section>
 
-    <section>
-        <h2>3. Legal framework</h2>
-        <p>If you are in the European Economic Area (including Hungary), the General Data Protection Regulation (EU) 2016/679 ("GDPR") and national laws (e.g. Hungarian Act CXII of 2011 on informational self-determination) apply.</p>
-        <p>This Policy explains: what data we process; why and on what legal basis; how long we keep it; who we share it with; your rights; and how to exercise them.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Data controller</h2>
+                <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-medium">FridgeSaverAI@protonmail.com</a></p>
+                <p><strong>Website:</strong> www.fridgesaverai.com</p>
+                <p class="mt-2 text-sm italic text-slate-500">Where we use processors (see Section 8), they process data on our instructions and do not become controllers towards you, unless applicable law treats them as independent controllers.</p>
+            </section>
 
-    <section>
-        <h2>4. Categories of personal data (overview)</h2>
-        <p>Depending on how you use the Service, we may process:</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Category</th>
-                    <th>Examples (non-exhaustive)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td>Account and identity data</td><td>Email address, user ID, display name (if provided)</td></tr>
-                <tr><td>Authentication data</td><td>OAuth-related identifiers and tokens from third-party sign-in (e.g. Google, Apple)</td></tr>
-                <tr><td>Inventory and food data</td><td>Item names, quantities, estimated values, expiry-related information, categories, optional images or thumbnails</td></tr>
-                <tr><td>Image and media data</td><td>Photos from camera or gallery uploaded for scanning or inventory</td></tr>
-                <tr><td>AI-related technical content</td><td>Images and related prompts/metadata sent to AI providers for analysis</td></tr>
-                <tr><td>Recipe and usage data</td><td>Generated or saved recipes, language preference, usage events linked to your account</td></tr>
-                <tr><td>Subscription and billing metadata</td><td>Subscription status, plan type, transaction identifiers via payment platforms</td></tr>
-                <tr><td>Support and communications</td><td>Messages you send us, feedback content, contact email</td></tr>
-                <tr><td>Technical and log data</td><td>IP address, device/browser characteristics, timestamps, error and access logs</td></tr>
-                <tr><td>Push notification data</td><td>Device push token (e.g. FCM), notification preferences (if implemented)</td></tr>
-            </tbody>
-        </table>
-        <p>Not every user will have every category; it depends on features used and whether you create an account.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Legal framework</h2>
+                <p>If you are in the European Economic Area (including Hungary), the General Data Protection Regulation (EU) 2016/679 ("GDPR") and national laws (e.g. Hungarian Act CXII of 2011) apply.</p>
+            </section>
 
-    <section>
-        <h2>5. Purposes and legal bases (GDPR Article 6)</h2>
-        <h3>5.1. Contract / service delivery (Art. 6(1)(b))</h3>
-        <p>Operating your account; inventory features; scanning and image-based analysis; recipe generation and display; cloud sync/storage where applicable; security and reliability of the Service.</p>
-        <h3>5.2. Legitimate interests (Art. 6(1)(f))</h3>
-        <p>Fraud prevention; abuse detection; service security; aggregated or pseudonymised analytics and product improvement where your fundamental rights are not overridden.</p>
-        <h3>5.3. Consent (Art. 6(1)(a))</h3>
-        <p>Where required by law or by platform rules: Access to camera or photo library for scanning or uploads; Push notifications, where not strictly necessary for the core contract; Optional marketing communications (if introduced).</p>
-        <p>You may withdraw consent via device settings and/or in-app controls where available. Withdrawal does not affect lawfulness of processing before withdrawal.</p>
-        <h3>5.4. Legal obligation (Art. 6(1)(c))</h3>
-        <p>Compliance with tax, accounting, or regulatory retention requirements; lawful responses to competent authorities.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Categories of personal data</h2>
+                <table>
+                    <thead><tr><th>Category</th><th>Examples</th></tr></thead>
+                    <tbody>
+                        <tr><td>Account & identity</td><td>Email address, user ID, display name</td></tr>
+                        <tr><td>Authentication</td><td>OAuth tokens from Google/Apple</td></tr>
+                        <tr><td>Inventory & food</td><td>Item names, quantities, estimated values, expiry dates</td></tr>
+                        <tr><td>Image & media</td><td>Photos from camera/gallery for scanning</td></tr>
+                        <tr><td>AI-related content</td><td>Images and metadata sent for analysis</td></tr>
+                        <tr><td>Recipe & usage</td><td>Saved recipes, language preference, usage events</td></tr>
+                        <tr><td>Subscription</td><td>Plan type, transaction identifiers</td></tr>
+                        <tr><td>Support</td><td>Messages, feedback, contact email</td></tr>
+                        <tr><td>Technical</td><td>IP address, device characteristics, logs</td></tr>
+                        <tr><td>Push data</td><td>Device push token (FCM)</td></tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <section>
-        <h2>6. Special categories of data</h2>
-        <p>The Service is not designed to collect health data. You might voluntarily enter free-text notes (e.g. allergies or dietary conditions). Such content is processed at your own initiative; the appropriate legal basis may be consent or another basis depending on context. We recommend not entering sensitive health information unless you accept that it will be stored and processed as part of the Service.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Purposes and legal bases (GDPR Article 6)</h2>
+                <h3 class="font-bold text-slate-800">5.1. Contract / service delivery (Art. 6(1)(b))</h3>
+                <p>Operating your account; inventory features; scanning; recipe generation; cloud sync; security.</p>
+                <h3 class="font-bold text-slate-800 mt-4">5.2. Legitimate interests (Art. 6(1)(f))</h3>
+                <p>Fraud prevention; abuse detection; service security; product improvement.</p>
+                <h3 class="font-bold text-slate-800 mt-4">5.3. Consent (Art. 6(1)(a))</h3>
+                <p>Camera access; push notifications; optional marketing.</p>
+                <h3 class="font-bold text-slate-800 mt-4">5.4. Legal obligation (Art. 6(1)(c))</h3>
+                <p>Tax, accounting, or regulatory retention requirements.</p>
+            </section>
 
-    <section>
-        <h2>7. Automated decision-making and profiling</h2>
-        <p>AI features provide suggestions (e.g. food detection, recipes). They do not constitute solely automated decisions with legal or similarly significant effects under GDPR Article 22 in the sense described there, unless we separately inform you and establish a different process. Any profiling beyond basic personalisation will be described transparently if introduced.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Special categories of data</h2>
+                <p>The Service is not designed to collect health data. You might voluntarily enter notes (e.g. allergies). Such content is processed at your own initiative.</p>
+            </section>
 
-    <section>
-        <h2>8. Processors and third-party services</h2>
-        <p>Non-exhaustive examples (actual list depends on deployment):</p>
-        <ul>
-            <li>Google Firebase (authentication, database, storage, possibly Firebase Cloud Messaging for push)</li>
-            <li>Google (Gemini / GenAI) or other AI providers for image/text processing</li>
-            <li>Hosting / infrastructure (e.g. Railway or similar) for APIs and logs</li>
-            <li>Payments / subscriptions (e.g. RevenueCat, Google Play Billing)</li>
-            <li>Social / OAuth sign-in (Google, Apple) under their respective policies</li>
-            <li>Image providers (e.g. Unsplash) where recipe imagery is sourced externally</li>
-        </ul>
-        <p>We use data processing agreements or equivalent terms with processors where required.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Automated decision-making and profiling</h2>
+                <p>AI features provide suggestions. They do not constitute solely automated decisions with legal effects under GDPR Article 22.</p>
+            </section>
 
-    <section>
-        <h2>9. International transfers</h2>
-        <p>Some providers may process data outside the EEA (e.g. United States). Where required, we rely on appropriate safeguards such as Standard Contractual Clauses and/or provider documentation (e.g. Google). You may request further information via <a href="mailto:FridgeSaverAI@protonmail.com">FridgeSaverAI@protonmail.com</a>.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Processors and third-party services</h2>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li>Google Firebase (Auth, database, storage)</li>
+                    <li>Google (Gemini / GenAI)</li>
+                    <li>Hosting (e.g. Railway)</li>
+                    <li>Payments (RevenueCat, Google Play Billing)</li>
+                    <li>Social/OAuth (Google, Apple)</li>
+                    <li>Image providers (Unsplash)</li>
+                </ul>
+            </section>
 
-    <section>
-        <h2>10. Retention</h2>
-        <ul>
-            <li><strong>Account data:</strong> until account deletion, then limited retention in backups if technically necessary.</li>
-            <li><strong>Inventory and recipe data:</strong> until you delete it or delete your account; reasonable technical delay for propagation and backups.</li>
-            <li><strong>Logs:</strong> for security and operations, typically 30–90 days unless longer retention is justified.</li>
-            <li><strong>Legal claims:</strong> data may be retained as required by limitation periods or proceedings.</li>
-        </ul>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">9. International transfers</h2>
+                <p>Where data is processed outside the EEA (e.g. USA), we rely on Standard Contractual Clauses or equivalent provider safeguards.</p>
+            </section>
 
-    <section>
-        <h2>11. Your rights (GDPR)</h2>
-        <p>You may have the right to:</p>
-        <ul>
-            <li>Information (this Policy)</li>
-            <li>Access to your personal data</li>
-            <li>Rectification of inaccurate data</li>
-            <li>Erasure ("right to be forgotten") where applicable</li>
-            <li>Restriction of processing in defined cases</li>
-            <li>Data portability in a structured, machine-readable format where feasible</li>
-            <li>Object to processing based on legitimate interests</li>
-            <li>Withdraw consent where processing was consent-based</li>
-            <li>Lodge a complaint with a supervisory authority (e.g. in Hungary: NAIH, or the authority in your country of residence)</li>
-        </ul>
-        <p>To exercise your rights, contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="contact-link">FridgeSaverAI@protonmail.com</a>. We respond within one month (extendable by two further months in complex cases, with notice).</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Retention</h2>
+                <p>Account data is kept until deletion. Inventory data until you delete it. Logs are kept for 30–90 days for security purposes.</p>
+            </section>
 
-    <section>
-        <h2>12. Security</h2>
-        <p>We implement technical and organisational measures, including TLS for data in transit where applicable, access controls, logging, and reliance on provider security features. No online service is 100% secure; you are responsible for protecting your credentials and device.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-t pt-6">11. Your rights (GDPR)</h2>
+                <p class="mb-4">You may have the right to:</p>
+                <ul class="list-disc pl-5 space-y-1 font-medium text-slate-800">
+                    <li>Information (this Policy)</li>
+                    <li>Access to your personal data</li>
+                    <li>Rectification of inaccurate data</li>
+                    <li>Erasure ("right to be forgotten") where applicable</li>
+                    <li>Restriction of processing in defined cases</li>
+                    <li>Data portability in a structured format</li>
+                    <li>Object to processing based on legitimate interests</li>
+                    <li>Withdraw consent at any time</li>
+                    <li>Lodge a complaint with a supervisory authority (e.g. NAIH in Hungary)</li>
+                </ul>
+                <p class="mt-4">To exercise your rights, contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a>. We respond within one month.</p>
+            </section>
 
-    <section>
-        <h2>13. Children</h2>
-        <p>The Service is not directed at children under 16 years. If we learn we have collected personal data from a child without a valid basis, we will delete it.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Security</h2>
+                <p>We use TLS encryption, access controls, and logging. No service is 100% secure; protect your credentials.</p>
+            </section>
 
-    <section>
-        <h2>14. Cookies and web</h2>
-        <p>If a web interface uses non-essential cookies or similar technologies, we will provide a cookie notice and choices as required by law. The mobile app may use local storage for technical purposes (e.g. preferences), which is not the same as browser cookies.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">13. Children</h2>
+                <p>Not directed at children under 16. If we learn of such data, we delete it.</p>
+            </section>
 
-    <section>
-        <h2>15. Changes</h2>
-        <p>We may update this Policy for new features, legal requirements, or processors. We will notify you of material changes by reasonable means (e.g. in-app notice, email, or website). Continued use after notice may constitute acceptance where permitted by law.</p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">14. Cookies and web</h2>
+                <p>If we use non-essential cookies, we will provide a choice. Mobile apps use local storage for technical settings.</p>
+            </section>
 
-    <section>
-        <h2>16. Contact</h2>
-        <p>Privacy and data protection: <a href="mailto:FridgeSaverAI@protonmail.com">FridgeSaverAI@protonmail.com</a></p>
-        <p>General contact: <a href="mailto:FridgeSaverAI@protonmail.com">FridgeSaverAI@protonmail.com</a></p>
-        <p>Official contact email: <a href="mailto:FridgeSaverAI@protonmail.com" class="contact-link">FridgeSaverAI@protonmail.com</a></p>
-    </section>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">15. Changes</h2>
+                <p>We may update this Policy. material changes will be notified via in-app notice or email.</p>
+            </section>
 
-    <footer>
-        <p>© 2026 FridgeSaver AI · <a href="https://www.fridgesaverai.com">Home</a></p>
+            <section>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">16. Contact</h2>
+                <p>Privacy and data protection: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a></p>
+                <p>General contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-sm">© 2026 FridgeSaver AI · <a href="/" class="text-slate-400 hover:text-white underline">Home</a></p>
+        </div>
     </footer>
 
 </body>
