@@ -3,14 +3,10 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-const githubPagesBase =
-  process.env.GITHUB_ACTIONS === "true" && process.env.GITHUB_REPOSITORY
-    ? `/${process.env.GITHUB_REPOSITORY.split("/")[1]}/`
-    : "/";
-
-// https://vitejs.dev/config/
+// Relative asset paths keep the app working on both the GitHub Pages repo URL
+// and the custom domain root.
 export default defineConfig(({ mode }) => ({
-  base: githubPagesBase,
+  base: "./",
   server: {
     host: "::",
     port: 8080,
