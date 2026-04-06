@@ -24,12 +24,10 @@ const Privacy = () => (
         <section>
           <h2 className="text-xl font-semibold text-foreground mb-3">2. Data controller</h2>
           <ul className="space-y-1">
-            <li><strong className="text-foreground">Data controller:</strong> [Legal name of company or sole trader]</li>
-            <li><strong className="text-foreground">Registered address / postal address:</strong> [Full address]</li>
             <li><strong className="text-foreground">Privacy contact email:</strong>{" "}
               <a href="mailto:FridgeSaverAI@protonmail.com" className="text-primary hover:underline">FridgeSaverAI@protonmail.com</a>
             </li>
-            <li><strong className="text-foreground">Website:</strong> [if applicable]</li>
+            <li><strong className="text-foreground">Website:</strong> www.fridgesaverai.com</li>
           </ul>
           <p className="mt-3">
             Where we use processors (see Section 8), they process data on our instructions and do not become controllers towards you, unless applicable law treats them as independent controllers.
