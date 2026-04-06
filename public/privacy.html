@@ -7,171 +7,215 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .google-disclosure { background-color: #f0f7ff; border: 2px solid #2563eb; border-left-width: 8px; }
-        table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.875rem; }
-        th, td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
-        th { background-color: #f8fafc; font-weight: 600; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .google-box { background-color: #f0f7ff; border: 1px solid #bae6fd; border-left: 4px solid #0ea5e9; }
+        .policy-content h2 { color: #111827; font-size: 1.25rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem; }
+        .policy-content h3 { color: #1f2937; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+        .policy-content p { margin-bottom: 1rem; }
+        .policy-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+        .policy-content li { margin-bottom: 0.5rem; }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white">
 
-    <nav class="fixed top-0 w-full h-20 bg-white/80 backdrop-blur-md border-b border-slate-100 z-50 flex items-center">
-        <div class="container mx-auto px-6 max-w-6xl flex justify-between items-center">
-            <a href="/" class="flex items-center gap-2 no-underline">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-                    <span class="text-white font-bold text-xl">F</span>
-                </div>
-                <span class="font-bold text-xl tracking-tight text-slate-900">FridgeSaver AI</span>
+    <nav class="fixed top-0 w-full h-20 bg-white border-b border-gray-100 z-50">
+        <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3">
+                <img src="https://www.fridgesaverai.com/logo.png" alt="FS" class="w-8 h-8 rounded-lg bg-black p-1 shadow-sm">
+                <span class="font-bold text-xl text-gray-900 tracking-tight">FridgeSaver AI</span>
             </a>
+            <div class="flex items-center gap-8">
+                <a href="/" class="text-gray-500 hover:text-gray-900 text-sm font-medium">Home</a>
+                <a href="/manage-subscription" class="px-5 py-2.5 border border-gray-200 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-all">Manage Subscription</a>
+                <div class="flex items-center gap-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-9">
+                    <div class="flex flex-col">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-9">
+                        <span class="text-[10px] text-gray-400 self-center">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <main class="container mx-auto px-6 pt-32 pb-20 max-w-3xl">
-        <h1 class="text-4xl font-extrabold text-slate-900 mb-2">Privacy Policy</h1>
-        <p class="text-sm text-slate-500 mb-10">Effective: 4 April 2026 · Last updated: 6 April 2026</p>
+    <main class="max-w-4xl mx-auto pt-32 pb-20 px-6">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Privacy Policy – FridgeSaver AI</h1>
+        <p class="text-sm text-gray-400 mb-10 font-medium tracking-wide uppercase">Effective: 4 April 2026 · Last updated: 6 April 2026</p>
 
-        <div class="google-disclosure p-6 rounded-xl mb-12 shadow-sm">
-            <h3 class="text-blue-800 font-bold text-lg mb-3">Google API Services User Data Disclosure</h3>
-            <div class="space-y-4 text-sm text-blue-900 leading-relaxed">
-                <p><strong>1. Data Accessed:</strong> Our application accesses your Google account name, email address, and Google user ID via OAuth 2.0.</p>
-                <p><strong>2. Data Usage:</strong> This data is used solely for authentication and secure account creation. We <strong>do not</strong> use Google user data for marketing, advertising, or profiling.</p>
-                <p><strong>3. Data Sharing:</strong> Your Google data is shared only with <strong>Google Firebase</strong> and <strong>RevenueCat</strong>. No other third parties receive this data.</p>
-                <p><strong>4. Data Storage:</strong> Stored in <strong>Firebase Firestore</strong> (encrypted at rest) and transmitted via <strong>HTTPS/TLS encryption</strong>.</p>
-                <p><strong>5. Deletion:</strong> Users can delete their account in-app or by contacting FridgeSaverAI@protonmail.com. All data is deleted within 30 days.</p>
+        <div class="google-box p-6 rounded-2xl mb-12 shadow-sm">
+            <h3 class="text-blue-900 font-bold text-lg mb-4 flex items-center gap-2 text-[17px]">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                Google API Services User Data Disclosure
+            </h3>
+            <div class="space-y-4 text-[14px] text-blue-800/90 leading-relaxed">
+                <p>To comply with Google API Services User Data Policy, we clearly disclose our data practices regarding Google user data:</p>
+                <p><strong>1. Data Accessed:</strong> Our application accesses your Google account name (display name), Google email address, and Google user ID via OAuth 2.0.</p>
+                <p><strong>2. Data Usage:</strong> This data is used solely for authentication, secure account creation, and identifying your user account within our system. We <strong>do not</strong> use Google user data for marketing, advertising, or any third-party profiling.</p>
+                <p><strong>3. Data Sharing:</strong> Your Google data is shared only with <strong>Google Firebase</strong> (Authentication provider) and <strong>RevenueCat</strong> (Subscription management). No other third parties receive your Google user data.</p>
+                <p><strong>4. Data Storage & Protection:</strong> Data is stored in <strong>Firebase Firestore</strong> (encrypted at rest) and transmitted via <strong>HTTPS/TLS encryption</strong>. Access is restricted to authenticated requests only.</p>
+                <p><strong>5. Data Retention & Deletion:</strong> Data is retained until account deletion. Users can delete their account in-app (Profile → Settings → Delete Account) or by contacting FridgeSaverAI@protonmail.com. All data is permanently deleted within 30 days of the request.</p>
             </div>
         </div>
 
-        <div class="space-y-8 text-slate-600">
+        <div class="policy-content text-[15px] text-gray-600 leading-relaxed">
+            
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Introduction and scope</h2>
+                <h2>1. Introduction and scope</h2>
                 <p>This Privacy Policy ("Policy") describes how we collect, use, store, share, and protect personal data when you use the FridgeSaver AI mobile application, any related web interfaces, and the backend systems that operate the service (together, the "Service").</p>
-                <p class="mt-2">By using the Service, you acknowledge that your personal data will be processed as described in this Policy, unless applicable law requires otherwise.</p>
+                <p>By using the Service, you acknowledge that your personal data will be processed as described in this Policy, unless applicable law requires otherwise.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Data controller</h2>
-                <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-medium">FridgeSaverAI@protonmail.com</a></p>
+                <h2>2. Data controller</h2>
+                <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a></p>
                 <p><strong>Website:</strong> www.fridgesaverai.com</p>
-                <p class="mt-2 text-sm italic text-slate-500">Where we use processors (see Section 8), they process data on our instructions and do not become controllers towards you, unless applicable law treats them as independent controllers.</p>
+                <p class="text-sm italic">Where we use processors (see Section 8), they process data on our instructions and do not become controllers towards you, unless applicable law treats them as independent controllers.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Legal framework</h2>
-                <p>If you are in the European Economic Area (including Hungary), the General Data Protection Regulation (EU) 2016/679 ("GDPR") and national laws (e.g. Hungarian Act CXII of 2011) apply.</p>
+                <h2>3. Legal framework</h2>
+                <p>If you are in the European Economic Area (including Hungary), the General Data Protection Regulation (EU) 2016/679 ("GDPR") and national laws (e.g. Hungarian Act CXII of 2011 on informational self-determination) apply.</p>
+                <p>This Policy explains: what data we process; why and on what legal basis; how long we keep it; who we share it with; your rights; and how to exercise them.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Categories of personal data</h2>
-                <table>
-                    <thead><tr><th>Category</th><th>Examples</th></tr></thead>
-                    <tbody>
-                        <tr><td>Account & identity</td><td>Email address, user ID, display name</td></tr>
-                        <tr><td>Authentication</td><td>OAuth tokens from Google/Apple</td></tr>
-                        <tr><td>Inventory & food</td><td>Item names, quantities, estimated values, expiry dates</td></tr>
-                        <tr><td>Image & media</td><td>Photos from camera/gallery for scanning</td></tr>
-                        <tr><td>AI-related content</td><td>Images and metadata sent for analysis</td></tr>
-                        <tr><td>Recipe & usage</td><td>Saved recipes, language preference, usage events</td></tr>
-                        <tr><td>Subscription</td><td>Plan type, transaction identifiers</td></tr>
-                        <tr><td>Support</td><td>Messages, feedback, contact email</td></tr>
-                        <tr><td>Technical</td><td>IP address, device characteristics, logs</td></tr>
-                        <tr><td>Push data</td><td>Device push token (FCM)</td></tr>
-                    </tbody>
-                </table>
+                <h2>4. Categories of personal data (overview)</h2>
+                <p>Depending on how you use the Service, we may process:</p>
+                <div class="overflow-x-auto border border-gray-100 rounded-xl mt-4 mb-4">
+                    <table class="w-full text-left text-sm">
+                        <thead class="bg-gray-50 text-gray-900 font-semibold border-b border-gray-100">
+                            <tr><th class="p-4">Category</th><th class="p-4">Examples</th></tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr><td class="p-4 font-medium">Account & identity data</td><td class="p-4 text-gray-500">Email address, user ID, display name</td></tr>
+                            <tr><td class="p-4 font-medium">Authentication data</td><td class="p-4 text-gray-500">OAuth identifiers and tokens from Google, Apple</td></tr>
+                            <tr><td class="p-4 font-medium">Inventory & food data</td><td class="p-4 text-gray-500">Item names, quantities, expiry info, thumbnails</td></tr>
+                            <tr><td class="p-4 font-medium">Image & media data</td><td class="p-4 text-gray-500">Photos uploaded for scanning or inventory</td></tr>
+                            <tr><td class="p-4 font-medium">Technical & log data</td><td class="p-4 text-gray-500">IP address, device logs, push tokens (FCM)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Not every user will have every category; it depends on features used.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Purposes and legal bases (GDPR Article 6)</h2>
-                <h3 class="font-bold text-slate-800">5.1. Contract / service delivery (Art. 6(1)(b))</h3>
-                <p>Operating your account; inventory features; scanning; recipe generation; cloud sync; security.</p>
-                <h3 class="font-bold text-slate-800 mt-4">5.2. Legitimate interests (Art. 6(1)(f))</h3>
+                <h2>5. Purposes and legal bases (GDPR Article 6)</h2>
+                <h3>5.1. Contract / service delivery (Art. 6(1)(b))</h3>
+                <p>Operating your account; inventory features; scanning and analysis; recipe generation; cloud sync; security and reliability.</p>
+                <h3>5.2. Legitimate interests (Art. 6(1)(f))</h3>
                 <p>Fraud prevention; abuse detection; service security; product improvement.</p>
-                <h3 class="font-bold text-slate-800 mt-4">5.3. Consent (Art. 6(1)(a))</h3>
-                <p>Camera access; push notifications; optional marketing.</p>
-                <h3 class="font-bold text-slate-800 mt-4">5.4. Legal obligation (Art. 6(1)(c))</h3>
-                <p>Tax, accounting, or regulatory retention requirements.</p>
+                <h3>5.3. Consent (Art. 6(1)(a))</h3>
+                <p>Access to camera or photo library; Push notifications; Optional marketing communications.</p>
+                <h3>5.4. Legal obligation (Art. 6(1)(c))</h3>
+                <p>Compliance with tax, accounting, or regulatory retention requirements.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Special categories of data</h2>
-                <p>The Service is not designed to collect health data. You might voluntarily enter notes (e.g. allergies). Such content is processed at your own initiative.</p>
+                <h2>6. Special categories of data</h2>
+                <p>The Service is not designed to collect health data. You might voluntarily enter notes (e.g. allergies). Such content is processed at your own initiative; we recommend not entering sensitive health information unless necessary.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Automated decision-making and profiling</h2>
-                <p>AI features provide suggestions. They do not constitute solely automated decisions with legal effects under GDPR Article 22.</p>
+                <h2>7. Automated decision-making and profiling</h2>
+                <p>AI features provide suggestions. They do not constitute solely automated decisions with legal or similarly significant effects under GDPR Article 22.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">8. Processors and third-party services</h2>
-                <ul class="list-disc pl-5 space-y-1">
-                    <li>Google Firebase (Auth, database, storage)</li>
-                    <li>Google (Gemini / GenAI)</li>
-                    <li>Hosting (e.g. Railway)</li>
-                    <li>Payments (RevenueCat, Google Play Billing)</li>
-                    <li>Social/OAuth (Google, Apple)</li>
-                    <li>Image providers (Unsplash)</li>
+                <h2>8. Processors and third-party services</h2>
+                <ul>
+                    <li>Google Firebase (authentication, database, storage)</li>
+                    <li>Google (Gemini / GenAI) for image/text processing</li>
+                    <li>Railway (Hosting / infrastructure)</li>
+                    <li>RevenueCat (Payments / subscriptions management)</li>
+                    <li>Social / OAuth sign-in (Google, Apple)</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">9. International transfers</h2>
-                <p>Where data is processed outside the EEA (e.g. USA), we rely on Standard Contractual Clauses or equivalent provider safeguards.</p>
+                <h2>9. International transfers</h2>
+                <p>Some providers may process data outside the EEA (e.g. United States). We rely on appropriate safeguards such as Standard Contractual Clauses (SCCs).</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">10. Retention</h2>
-                <p>Account data is kept until deletion. Inventory data until you delete it. Logs are kept for 30–90 days for security purposes.</p>
-            </section>
-
-            <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4 border-t pt-6">11. Your rights (GDPR)</h2>
-                <p class="mb-4">You may have the right to:</p>
-                <ul class="list-disc pl-5 space-y-1 font-medium text-slate-800">
-                    <li>Information (this Policy)</li>
-                    <li>Access to your personal data</li>
-                    <li>Rectification of inaccurate data</li>
-                    <li>Erasure ("right to be forgotten") where applicable</li>
-                    <li>Restriction of processing in defined cases</li>
-                    <li>Data portability in a structured format</li>
-                    <li>Object to processing based on legitimate interests</li>
-                    <li>Withdraw consent at any time</li>
-                    <li>Lodge a complaint with a supervisory authority (e.g. NAIH in Hungary)</li>
+                <h2>10. Retention</h2>
+                <ul>
+                    <li><strong>Account data:</strong> until account deletion.</li>
+                    <li><strong>Inventory and recipe data:</strong> until you delete it or delete your account.</li>
+                    <li><strong>Logs:</strong> typically 30–90 days for security purposes.</li>
                 </ul>
-                <p class="mt-4">To exercise your rights, contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a>. We respond within one month.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">12. Security</h2>
-                <p>We use TLS encryption, access controls, and logging. No service is 100% secure; protect your credentials.</p>
+                <h2>11. Your rights (GDPR)</h2>
+                <p>Under the GDPR, you have the following rights regarding your personal data:</p>
+                <ul>
+                    <li><strong>Access & Information:</strong> The right to be informed and receive a copy of your data.</li>
+                    <li><strong>Rectification:</strong> The right to correct inaccurate data.</li>
+                    <li><strong>Erasure:</strong> The "right to be forgotten".</li>
+                    <li><strong>Data Portability:</strong> The right to receive data in a machine-readable format.</li>
+                    <li><strong>Withdraw Consent:</strong> The right to withdraw consent at any time.</li>
+                </ul>
+                <p>To exercise these rights, contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a>.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">13. Children</h2>
-                <p>Not directed at children under 16. If we learn of such data, we delete it.</p>
+                <h2>12. Security</h2>
+                <p>We implement technical measures, including TLS for data in transit and strict access controls. No service is 100% secure; you are responsible for protecting your credentials.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">14. Cookies and web</h2>
-                <p>If we use non-essential cookies, we will provide a choice. Mobile apps use local storage for technical settings.</p>
+                <h2>13. Children</h2>
+                <p>The Service is not directed at children under 16 years. If we learn we have collected such data without a valid basis, we will delete it.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">15. Changes</h2>
-                <p>We may update this Policy. material changes will be notified via in-app notice or email.</p>
+                <h2>14. Cookies and web</h2>
+                <p>The mobile app may use local storage for technical purposes. If our web interface uses non-essential cookies, we provide a cookie notice.</p>
             </section>
 
             <section>
-                <h2 class="text-2xl font-bold text-slate-900 mb-4">16. Contact</h2>
-                <p>Privacy and data protection: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a></p>
-                <p>General contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600">FridgeSaverAI@protonmail.com</a></p>
+                <h2>15. Changes</h2>
+                <p>We may update this Policy. We will notify you of material changes via in-app notice or email. Continued use constitutes acceptance.</p>
+            </section>
+
+            <section>
+                <h2>16. Contact</h2>
+                <p>Privacy and general support contact: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a></p>
             </section>
         </div>
     </main>
 
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="container mx-auto px-6 text-center">
-            <p class="text-sm">© 2026 FridgeSaver AI · <a href="/" class="text-slate-400 hover:text-white underline">Home</a></p>
+    <footer class="bg-[#030712] text-white py-16 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
+            <div class="space-y-6">
+                <div class="flex items-center gap-3">
+                    <img src="https://www.fridgesaverai.com/logo.png" alt="FS" class="w-6 h-6 rounded bg-[#111827] p-1 border border-gray-800">
+                    <span class="font-bold text-lg">FridgeSaver AI</span>
+                </div>
+                <div class="space-y-3 text-sm">
+                    <p class="text-gray-400 font-medium">Download FridgeSaver AI</p>
+                    <div class="flex flex-col items-start gap-4">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-10">
+                        <div class="flex flex-col items-center">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-10 opacity-60">
+                            <span class="text-[10px] text-gray-600 font-medium mt-1">Coming Soon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4 text-sm font-medium">
+                <a href="/privacy.html" class="text-gray-100 hover:text-white transition-colors">Privacy Policy</a>
+                <a href="/terms" class="text-gray-400 hover:text-white transition-colors">Terms of Use</a>
+                <div class="mt-4 flex items-center gap-2 text-gray-100">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    <span>FridgeSaverAI@protonmail.com</span>
+                </div>
+            </div>
+
+            <div class="text-gray-500 text-sm self-end">
+                © 2026 FridgeSaver AI. All rights reserved.
+            </div>
         </div>
     </footer>
 
