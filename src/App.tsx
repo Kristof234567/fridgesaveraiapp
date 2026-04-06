@@ -12,9 +12,11 @@ import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 const routerBasename =
-  import.meta.env.BASE_URL === "/"
-    ? "/"
-    : import.meta.env.BASE_URL.replace(/\/$/, "");
+  typeof window !== "undefined" &&
+  (window.location.pathname === "/fridgesaveraiapp" ||
+    window.location.pathname.startsWith("/fridgesaveraiapp/"))
+    ? "/fridgesaveraiapp"
+    : "/";
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
