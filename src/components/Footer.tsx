@@ -17,7 +17,7 @@ const Footer = () => (
 
       <div className="flex flex-col items-center gap-4">
         <div className="flex gap-6 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
-          <a href="/privacy.html" to="/privacy" className="transition-colors hover:text-primary">Privacy Policy</a>
+          <a href="/privacy.html" className="transition-colors hover:text-primary">Privacy Policy</a>
           <Link to="/terms" className="transition-colors hover:text-primary">Terms of Use</Link>
         </div>
         <div className="flex items-center gap-2 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
