@@ -7,51 +7,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; color: #4b5563; }
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .disclaimer-box { background-color: #fff7ed; border: 1px solid #ffedd5; border-left: 4px solid #f97316; }
         .policy-content h2 { color: #111827; font-size: 1.25rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 1px solid #f1f5f9; padding-bottom: 0.5rem; }
         .policy-content h3 { color: #1f2937; font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-        .policy-content p { margin-bottom: 1rem; line-height: 1.6; }
+        .policy-content p { margin-bottom: 1rem; }
         .policy-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
         .policy-content li { margin-bottom: 0.5rem; }
-        .disclaimer-box { background-color: #fff7ed; border: 1px solid #ffedd5; border-left: 4px solid #f97316; }
     </style>
+    <script>
+        const base = document.querySelector('base')?.href
+            || (location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp/' : '/');
+        function appUrl(path) { return base.replace(/\/$/, '') + path; }
+    </script>
 </head>
 <body class="bg-white">
 
-    <nav class="fixed top-0 w-full h-20 bg-white border-b border-gray-100 z-50">
+    <nav class="fixed top-0 w-full h-16 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
-            <a href="https://www.fridgesaverai.com" class="flex items-center gap-3">
-                <img src="/logofridge.png" alt="FS" class="w-8 h-8 rounded-lg bg-black p-1 shadow-sm">
-                <span class="font-bold text-xl text-gray-900 tracking-tight">FridgeSaver AI</span>
+            <a id="nav-logo" href="/" class="flex items-center gap-2">
+                <img src="./logofridge.png" alt="FridgeSaver AI" class="h-8 w-8 rounded">
+                <span class="font-bold text-lg text-gray-900">FridgeSaver AI</span>
             </a>
-            <div class="flex items-center gap-8">
-                <a href="https://www.fridgesaverai.com" class="text-gray-500 hover:text-gray-900 text-sm font-medium">Home</a>
-                <a href="https://www.fridgesaverai.com/manage-subscription" class="px-5 py-2.5 border border-gray-200 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-all text-gray-900">Manage Subscription</a>
+            <div class="flex items-center gap-4">
+                <a id="nav-home" href="/" class="hidden sm:inline-block text-sm text-gray-500 hover:text-gray-900 transition-colors">Home</a>
+                <a id="nav-manage" href="/manage-subscription" class="hidden sm:inline-flex items-center rounded-md border border-gray-200 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 transition-colors">Manage Subscription</a>
+                <div class="flex items-center gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank" rel="noopener noreferrer nofollow">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-8">
+                    </a>
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-8 opacity-60">
+                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-400 whitespace-nowrap">Coming Soon</span>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto pt-32 pb-20 px-6">
-        <h1 class="text-3xl font-bold text-gray-900 mb-2 text-center md:text-left">Terms of Use</h1>
-        <p class="text-sm text-gray-400 mb-10 font-medium tracking-wide uppercase text-center md:text-left">
-            Effective: 4 April 2026 · Last updated: 7 April 2026
-        </p>
+    <main class="max-w-4xl mx-auto pt-28 pb-20 px-6">
+        <h1 class="text-3xl font-bold text-gray-900 mb-2">Terms of Use – FridgeSaver AI</h1>
+        <p class="text-sm text-gray-400 mb-10 font-medium tracking-wide uppercase">Effective: 4 April 2026 · Last updated: 7 April 2026</p>
 
         <div class="disclaimer-box p-6 rounded-2xl mb-12 shadow-sm text-orange-900 text-sm">
-            <p class="font-bold mb-2 uppercase tracking-tight">Important Notice (AI & Food Safety)</p>
-            FridgeSaver AI uses artificial intelligence for food recognition and recipe suggestions. AI models are probabilistic and can be incorrect. Always use your own senses (smell, sight, touch) to verify food safety.
+            <p class="font-bold mb-2 uppercase tracking-tight">Legal Notice</p>
+            Please read these Terms of Use carefully before using the Service. By using FridgeSaver AI, you agree to be bound by these provisions.
         </div>
 
-        <div class="policy-content text-[15px]">
-            
+        <div class="policy-content text-[15px] text-gray-600 leading-relaxed">
             <section>
                 <h2>1. General provisions</h2>
                 <h3>1.1. Parties</h3>
                 <p>These Terms of Use ("Terms") govern your use of the FridgeSaver AI mobile application and related services (the "Service").</p>
-                <p><strong>Contact:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a></p>
+                <p>Contact: FridgeSaverAI@protonmail.com</p>
                 <p>The individual or legal entity using the Service is referred to as "User", "you".</p>
                 <h3>1.2. Acceptance</h3>
-                <p>By downloading, installing, registering, signing in, or using any feature of the Service, you agree to these Terms and, where separately referenced, the Privacy Policy. If you do not agree, do not use the Service.</p>
+                <p>By downloading, installing, registering, signing in, or using any feature of the Service, you agree to these Terms and, where separately referenced, the Privacy Policy.</p>
+                <p>If you do not agree, do not use the Service.</p>
                 <h3>1.3. Language</h3>
                 <p>The official language of these Terms is English. In case of conflict, the English version prevails, to the extent permitted by law.</p>
             </section>
@@ -80,7 +92,8 @@
                 <h3>3.2. Account security</h3>
                 <p>You are responsible for passwords and access to your account. The Provider is not liable for unauthorised access resulting from your negligence.</p>
                 <h3>3.3. Suspension and deletion</h3>
-                <p>The Provider may suspend or delete your account if you materially or repeatedly breach these Terms, or if required by law or competent authority. You may request deletion of your account as described in the Privacy Policy and in-app options, where available.</p>
+                <p>The Provider may suspend or delete your account if you materially or repeatedly breach these Terms, or if required by law or competent authority.</p>
+                <p>You may request deletion of your account as described in the Privacy Policy and in-app options, where available.</p>
             </section>
 
             <section>
@@ -161,12 +174,12 @@
                 <h3>12.2. Jurisdiction</h3>
                 <p>Disputes shall be brought before the courts of Hungary, unless mandatory law provides otherwise.</p>
                 <h3>12.3. EU online dispute resolution</h3>
-                <p>If you are an EU consumer, you may use the European Commission's ODR platform: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://ec.europa.eu/consumers/odr/</a></p>
+                <p>If you are an EU consumer, you may use the European Commission's ODR platform: https://ec.europa.eu/consumers/odr/</p>
             </section>
 
             <section>
                 <h2>13. Contact</h2>
-                <p>Email: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a></p>
+                <p>Email: FridgeSaverAI@protonmail.com</p>
             </section>
 
             <section>
@@ -176,25 +189,60 @@
         </div>
     </main>
 
-    <footer class="bg-[#030712] text-white py-16 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12 text-sm">
-            <div class="space-y-4 text-center md:text-left">
-                <div class="flex items-center gap-3 justify-center md:justify-start">
-                    <img src="/logofridge.png" alt="FS" class="w-6 h-6 rounded bg-[#111827] p-1 border border-gray-800">
-                    <span class="font-bold text-lg">FridgeSaver AI</span>
+    <footer class="bg-[#030712] text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <div class="flex flex-col items-center gap-3 sm:items-start">
+                <div class="flex items-center gap-2">
+                    <img src="./logofridge.png" alt="FridgeSaver AI" class="h-6 w-6 rounded">
+                    <span class="text-sm font-semibold text-gray-100">FridgeSaver AI</span>
                 </div>
-                <p class="text-gray-500">The smart way to manage your kitchen.</p>
+                <p class="text-xs font-medium text-gray-500">Download FridgeSaver AI</p>
+                <div class="flex items-center gap-3">
+                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank" rel="noopener noreferrer nofollow">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-9 w-auto">
+                    </a>
+                    <div class="relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-9 w-auto opacity-60">
+                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 whitespace-nowrap">Coming Soon</span>
+                    </div>
+                </div>
             </div>
-            <div class="flex flex-col gap-3 font-medium text-center md:text-left">
-                <a href="https://www.fridgesaverai.com/privacy.html" class="text-gray-400 hover:text-white transition-colors underline underline-offset-4">Privacy Policy</a>
-                <a href="https://www.fridgesaverai.com/terms.html" class="text-white underline underline-offset-4">Terms of Use</a>
-                <a href="https://www.fridgesaverai.com" class="text-gray-400 hover:text-white transition-colors">Back to Home</a>
+
+            <div class="flex flex-col items-center gap-3 sm:items-end">
+                <div class="flex gap-6 text-sm">
+                    <a href="./privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                    <a id="footer-terms" href="./terms.html" class="text-white transition-colors underline underline-offset-8">Terms of Use</a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <a href="mailto:FridgeSaverAI@protonmail.com" class="text-gray-300 hover:text-white transition-colors">FridgeSaverAI@protonmail.com</a>
+                </div>
             </div>
-            <div class="text-gray-500 self-center md:self-end">
-                © 2026 FridgeSaver AI.
-            </div>
+
+            <p class="text-xs text-gray-600">© 2026 FridgeSaver AI. All rights reserved.</p>
         </div>
     </footer>
 
+    <script>
+        (function() {
+            var basePath = location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp' : '';
+            var links = {
+                'nav-logo': 'https://www.fridgesaverai.com',
+                'nav-home': 'https://www.fridgesaverai.com',
+                'nav-manage': '/manage-subscription',
+                'footer-terms': './terms.html'
+            };
+            Object.keys(links).forEach(function(id) {
+                var el = document.getElementById(id);
+                if (el) {
+                    if (links[id].startsWith('http')) {
+                        el.href = links[id];
+                    } else {
+                        el.href = basePath + links[id];
+                    }
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
