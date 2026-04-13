@@ -15,12 +15,6 @@
         .policy-content ul { list-style-type: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
         .policy-content li { margin-bottom: 0.5rem; }
     </style>
-    <script>
-        // Detect base path for GitHub Pages or local
-        const base = document.querySelector('base')?.href
-            || (location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp/' : '/');
-        function appUrl(path) { return base.replace(/\/$/, '') + path; }
-    </script>
 </head>
 <body class="bg-white">
 
@@ -61,7 +55,7 @@
                 <p><strong>2. Data Usage:</strong> This data is used solely for authentication, secure account creation, and identifying your user account within our system. We <strong>do not</strong> use Google user data for marketing, advertising, or any third-party profiling.</p>
                 <p><strong>3. Data Sharing:</strong> Your Google data is shared only with <strong>Google Firebase</strong> (Authentication provider) and <strong>RevenueCat</strong> (Subscription management). No other third parties receive your Google user data.</p>
                 <p><strong>4. Data Storage & Protection:</strong> Data is stored in <strong>Firebase Firestore</strong> (encrypted at rest) and transmitted via <strong>HTTPS/TLS encryption</strong>. Access is restricted to authenticated requests only.</p>
-                <p><strong>5. Data Retention & Deletion:</strong> Data is retained until account deletion. Users can delete their account in-app (Profile → Settings → Delete Account) or by contacting FridgeSaverAI@protonmail.com. All data is permanently deleted within 30 days of the request.</p>
+                <p><strong>5. Data Retention & Deletion:</strong> Data is retained until account deletion. Users can delete their account in-app (Profile → Settings → Delete Account) or by contacting FridgeSaverAI@protonmail.hu. All data is permanently deleted within 30 days of the request.</p>
             </div>
         </div>
 
@@ -75,7 +69,7 @@
             <section>
                 <h2>2. Data controller</h2>
                 <p>The data controller is the provider of FridgeSaver AI. As we operate as an independent developer entity, you may contact us directly for any privacy concerns.</p>
-                <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a></p>
+                <p><strong>Privacy contact email:</strong> <a href="mailto:FridgeSaverAI@protonmail.hu" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.hu</a></p>
                 <p><strong>Website:</strong> www.fridgesaverai.com</p>
             </section>
 
@@ -165,7 +159,7 @@
                     <li><strong>Right to Data Portability:</strong> Receive your inventory data in a structured format.</li>
                     <li><strong>Right to Object:</strong> Object to processing based on legitimate interests.</li>
                 </ul>
-                <p>To exercise these, simply email us at: <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a>.</p>
+                <p>To exercise these, simply email us at: <a href="mailto:FridgeSaverAI@protonmail.hu" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.hu</a>.</p>
             </section>
 
             <section>
@@ -190,55 +184,61 @@
 
             <section>
                 <h2>16. Contact and complaints</h2>
-                <p>If you have questions about this policy or our data practices, please contact us at <a href="mailto:FridgeSaverAI@protonmail.com" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.com</a>.</p>
+                <p>If you have questions about this policy or our data practices, please contact us at <a href="mailto:FridgeSaverAI@protonmail.hu" class="text-blue-600 font-semibold underline">FridgeSaverAI@protonmail.hu</a>.</p>
                 <p>You also have the right to lodge a complaint with a data protection authority. In Hungary, this is the NAIH (Nemzeti Adatvédelmi és Információszabadság Hatóság, www.naih.hu).</p>
             </section>
         </div>
     </main>
 
-    <footer class="bg-[#030712] text-gray-300 py-10">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
-            <div class="flex flex-col items-center gap-3 sm:items-start">
+    <footer class="bg-[#030712] text-gray-300 py-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
+            
+            <div class="flex flex-col items-center sm:items-start gap-3 flex-1">
                 <div class="flex items-center gap-2">
                     <img src="./logofridge.png" alt="FridgeSaver AI" class="h-6 w-6 rounded">
-                    <span class="text-sm font-semibold text-gray-100">FridgeSaver AI</span>
+                    <span class="text-sm font-semibold text-white">FridgeSaver AI</span>
                 </div>
                 <p class="text-xs font-medium text-gray-500">Download FridgeSaver AI</p>
                 <div class="flex items-center gap-3">
-                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank" rel="noopener noreferrer nofollow">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-9 w-auto">
+                    <a href="https://play.google.com/store/apps/details?id=com.fridgesaverai.app" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play" class="h-9">
                     </a>
                     <div class="relative">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on the App Store" class="h-9 w-auto opacity-60">
-                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] font-medium text-gray-500 whitespace-nowrap">Coming Soon</span>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store" class="h-9 opacity-60">
+                        <span class="absolute -bottom-4 left-1/2 -translate-x-1/2 text-[10px] text-gray-500 whitespace-nowrap font-medium">Coming Soon</span>
                     </div>
                 </div>
             </div>
 
-            <div class="flex flex-col items-center gap-3 sm:items-end">
-                <div class="flex gap-6 text-sm">
-                    <a href="./privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
-                    <a id="footer-terms" href="/terms" class="text-gray-300 hover:text-white transition-colors">Terms of Use</a>
+            <div class="flex flex-col items-center gap-4 flex-1">
+                <div class="flex items-center gap-6 text-sm">
+                    <a href="./privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a id="footer-terms" href="/terms" class="hover:text-white transition-colors">Terms of Use</a>
+                    <a id="footer-delete" href="/delete-account.html" class="text-white border-b border-red-500 font-medium hover:text-red-400 transition-colors">Delete Data</a>
                 </div>
                 <div class="flex items-center gap-2 text-sm">
                     <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-                    <a href="mailto:FridgeSaverAI@protonmail.com" class="text-gray-300 hover:text-white transition-colors">FridgeSaverAI@protonmail.com</a>
+                    <a href="mailto:FridgeSaverAI@protonmail.hu" class="hover:text-white transition-colors font-medium">FridgeSaverAI@protonmail.hu</a>
                 </div>
             </div>
 
-            <p class="text-xs text-gray-600">© 2026 FridgeSaver AI. All rights reserved.</p>
+            <div class="flex flex-col items-center sm:items-end flex-1">
+                <p class="text-xs text-gray-600">
+                    © 2026 FridgeSaver AI. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
     <script>
-        // Fix links for GitHub Pages subpath
         (function() {
             var basePath = location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp' : '';
             var links = {
-                'nav-logo': 'https://www.fridgesaverai.com',
-                'nav-home': 'https://www.fridgesaverai.com',
+                'nav-logo': '/',
+                'nav-home': '/',
                 'nav-manage': '/manage-subscription',
-                'footer-terms': '/terms'
+                'footer-terms': '/terms.html',
+                'footer-delete': '/delete-account.html'
             };
             Object.keys(links).forEach(function(id) {
                 var el = document.getElementById(id);
