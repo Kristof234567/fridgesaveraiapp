@@ -7,12 +7,12 @@ const Footer = () => {
   const pathPrefix = isSubpath ? '/fridgesaveraiapp' : '';
 
   return (
-    <footer className="py-10 bg-[#030712] text-gray-300">
+    <footer className="py-10 bg-[#030712] text-gray-300 border-t border-white/5">
       <div className="container max-w-7xl mx-auto px-6">
-        {/* Fő elrendezés: Mobilnezetben egymás alá, asztalin 3 oszlopba rendezve */}
-        <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+        {/* Egyetlen soros elrendezés asztali nézetben */}
+        <div className="flex flex-col gap-10 sm:flex-row sm:items-end sm:justify-between">
           
-          {/* 1. BAL OLDAL: Logo, Szöveg és Badges */}
+          {/* BAL OLDAL: Logo, Szöveg és Badges */}
           <div className="flex flex-col items-center sm:items-start gap-3 flex-1">
             <div className="flex items-center gap-2">
               <img src={logo} alt="FridgeSaver AI" className="h-6 w-6 rounded" />
@@ -22,7 +22,7 @@ const Footer = () => {
             <StoreBadges badgeHeight="h-9" />
           </div>
 
-          {/* 2. KÖZÉPSŐ RÉSZ: Linkek és Email (Fixen középre igazítva) */}
+          {/* KÖZÉP: Linkek és Email (Tökéletesen középre igazítva) */}
           <div className="flex flex-col items-center gap-4 flex-1">
             <div className="flex items-center gap-6 text-sm">
               <a href={`${pathPrefix}/privacy.html`} className="hover:text-white transition-colors">
@@ -40,14 +40,14 @@ const Footer = () => {
             </div>
             <div className="flex items-center gap-2 text-sm">
               <Mail className="h-4 w-4 text-green-500" />
-              <a href="mailto:FridgeSaverAI@protonmail.hu" className="hover:text-white transition-colors">
+              <a href="mailto:FridgeSaverAI@protonmail.hu" className="hover:text-white transition-colors font-medium">
                 FridgeSaverAI@protonmail.hu
               </a>
             </div>
           </div>
 
-          {/* 3. JOBB OLDAL: Copyright (Jobbra igazítva) */}
-          <div className="flex flex-col items-center sm:items-end justify-end flex-1">
+          {/* JOBB OLDAL: Copyright (Jobbra igazítva a kép alapján) */}
+          <div className="flex flex-col items-center sm:items-end flex-1">
             <p className="text-xs text-gray-600">
               © 2026 FridgeSaver AI. All rights reserved.
             </p>
