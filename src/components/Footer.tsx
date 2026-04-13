@@ -21,7 +21,6 @@ const Footer = () => {
 
         <div className="flex flex-col items-center gap-4">
           <div className="flex gap-6 text-sm" style={{ color: 'hsl(var(--footer-fg))' }}>
-            {/* 1. JAVÍTÁS: Sima <a> tagek, kiegészítve a prefix-szel */}
             <a href={`${pathPrefix}/privacy.html`} className="transition-colors hover:text-primary">
               Privacy Policy
             </a>
@@ -37,9 +36,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <p className="text-xs" style={{ color: 'hsl(0 0% 50%)' }}>
-          © {new Date().getFullYear()} FridgeSaver AI. All rights reserved.
-        </p>
+        {/* Módosított rész: Copyright és Delete Account egymás alatt, jobbra igazítva */}
+        <div className="flex flex-col items-center sm:items-end gap-1">
+          <p className="text-xs" style={{ color: 'hsl(0 0% 50%)' }}>
+            © {new Date().getFullYear()} FridgeSaver AI. All rights reserved.
+          </p>
+          <a 
+            href={`${pathPrefix}/delete-account.html`} 
+            className="text-[10px] uppercase tracking-widest transition-colors hover:text-red-400" 
+            style={{ color: 'hsl(0 0% 40%)' }}
+          >
+            Delete Account
+          </a>
+        </div>
       </div>
     </footer>
   );
