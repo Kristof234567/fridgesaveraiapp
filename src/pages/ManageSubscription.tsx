@@ -17,9 +17,12 @@ const ManageSubscription = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    /* A flex-col és a min-h-screen kombinációja kell ide */
+    <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
-      <main className="pt-32 pb-20">
+      
+      {/* A flex-grow kényszeríti a főrészt, hogy kitöltse a helyet, így a Footer az aljára tapad */}
+      <main className="pt-32 pb-20 flex-grow">
         <div className="container flex flex-col items-center">
           <div className="w-full max-w-md text-center">
             <h1 className="text-2xl font-bold text-foreground">Manage Subscription</h1>
@@ -59,6 +62,8 @@ const ManageSubscription = () => {
           </div>
         </div>
       </main>
+
+      {/* Így a Footer alatt garantáltan nem lesz semmi, mert ez az utolsó elem a képernyőn */}
       <Footer />
     </div>
   );
