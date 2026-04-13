@@ -3,91 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Account & Data - FridgeSaver AI</title>
+    <title>Delete Data(s) or Account – FridgeSaver AI</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+    </style>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            DEFAULT: '#22c55e', // FridgeSaver Green
-                            dark: '#16a34a',
-                        }
-                    }
-                }
-            }
-        }
+        const base = document.querySelector('base')?.href
+            || (location.pathname.startsWith('/fridgesaveraiapp') ? '/fridgesaveraiapp/' : '/');
+        function appUrl(path) { return base.replace(/\/$/, '') + path; }
     </script>
 </head>
-<body class="bg-gray-900 text-gray-100 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-white flex flex-col min-h-screen">
 
-    <header class="bg-gray-800 shadow-md py-4">
-        <div class="max-w-4xl mx-auto px-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-white flex items-center gap-2">
-                <span class="text-brand">🧊 FridgeSaver</span> AI
-            </h1>
-            <nav>
-                <a href="/" class="text-sm text-gray-400 hover:text-white transition underline decoration-brand">Back to Home</a>
-            </nav>
+    <nav class="fixed top-0 w-full h-16 bg-white/90 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto h-full px-6 flex items-center justify-between">
+            <a id="nav-logo" href="/" class="flex items-center gap-2">
+                <img src="./logofridge.png" alt="FridgeSaver AI" class="h-8 w-8 rounded">
+                <span class="font-bold text-lg text-gray-900">FridgeSaver AI</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a id="nav-home" href="/" class="hidden sm:inline-block text-sm text-gray-500 hover:text-gray-900 transition-colors">Home</a>
+                <a id="nav-manage" href="/manage-subscription" class="hidden sm:inline-flex items-center rounded-md border border-gray-200 bg-transparent px-4 py-2 text-sm font-medium text-gray-900 hover:bg-gray-50 transition-colors">Manage Subscription</a>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <main class="flex-grow flex items-center justify-center p-6">
-        <div class="bg-gray-800 p-8 rounded-2xl shadow-xl max-w-lg w-full border border-gray-700">
-            <h2 class="text-2xl font-bold mb-2 text-white text-center">Data Deletion Request</h2>
-            <p class="text-gray-400 text-sm mb-6 text-center">
-                Please fill out this form to request the permanent removal of your account and all personal data. This process is irreversible.
-            </p>
+    <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-6">
+        <div class="max-w-2xl w-full text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Delete Data(s) or Account</h1>
+            
+            <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 sm:p-12 shadow-sm">
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    Do you want to delete some of your data(s) or your account? <br>
+                    <span class="font-semibold text-gray-900">Send an Email!</span>
+                </p>
 
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_CODE" method="POST" class="space-y-5">
-                
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Account Email Address *</label>
-                    <input type="email" id="email" name="email" required 
-                        class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition"
-                        placeholder="your@email.com">
+                <div class="inline-block bg-white border border-green-100 px-8 py-4 rounded-2xl shadow-sm mb-6">
+                    <a href="mailto:FridgeSaverAI@protonmail.hu" class="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors break-all">
+                        FridgeSaverAI@protonmail.hu
+                    </a>
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-300 mb-2">Scope of Deletion *</label>
-                    <div class="space-y-2">
-                        <label class="flex items-center gap-3 bg-gray-900 border border-gray-600 p-3 rounded-lg cursor-pointer hover:border-gray-500 transition">
-                            <input type="radio" name="request_type" value="data_only" required class="text-brand focus:ring-brand">
-                            <span class="text-sm">Delete my usage data only</span>
-                        </label>
-                        <label class="flex items-center gap-3 bg-gray-900 border border-gray-600 p-3 rounded-lg cursor-pointer hover:border-gray-500 transition">
-                            <input type="radio" name="request_type" value="full_account" required class="text-brand focus:ring-brand">
-                            <span class="text-sm font-medium text-red-400">Delete entire account permanently</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div>
-                    <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Reason (Optional)</label>
-                    <textarea id="message" name="message" rows="3" 
-                        class="w-full bg-gray-900 border border-gray-600 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition"
-                        placeholder="How can we improve?"></textarea>
-                </div>
-
-                <button type="submit" 
-                    class="w-full bg-brand hover:bg-brand-dark text-white font-bold py-3 rounded-lg shadow-lg hover:shadow-brand/20 transition-all duration-200 uppercase tracking-wide">
-                    Send Deletion Request
-                </button>
-                
-                <p class="text-xs text-gray-500 text-center mt-4 italic">
+                <p class="text-sm text-gray-400 font-medium italic">
                     Requests are typically processed within 7 business days.
                 </p>
-            </form>
+            </div>
+            
+            <p class="mt-8 text-sm text-gray-500">
+                Please use the email address associated with your account so we can verify your request.
+            </p>
         </div>
     </main>
 
-    <footer class="bg-gray-900 border-t border-gray-800 py-8 mt-auto">
-        <div class="max-w-4xl mx-auto px-6 flex flex-col items-center md:items-end">
-            <p class="text-sm text-gray-500">© 2026 FridgeSaver AI. All rights reserved.</p>
-            <a href="/delete-account.html" class="mt-2 text-[10px] text-gray-600 hover:text-red-400 transition-colors duration-200 uppercase tracking-[0.2em]">
-                Delete Account
-            </a>
+    <footer class="bg-[#030712] text-gray-300 py-10">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
+            <div class="flex flex-col items-center gap-3 sm:items-start">
+                <div class="flex items-center gap-2">
+                    <img src="./logofridge.png" alt="FridgeSaver AI" class="h-6 w-6 rounded">
+                    <span class="text-sm font-semibold text-gray-100">FridgeSaver AI</span>
+                </div>
+                <p class="text-xs font-medium text-gray-500">Download FridgeSaver AI</p>
+            </div>
+
+            <div class="flex flex-col items-center gap-3 sm:items-end">
+                <div class="flex gap-6 text-sm">
+                    <a href="./privacy.html" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="./terms.html" class="text-gray-300 hover:text-white transition-colors">Terms of Use</a>
+                    <a href="./delete-account.html" class="text-white underline underline-offset-8">Delete Data</a>
+                </div>
+                <div class="flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    <a href="mailto:FridgeSaverAI@protonmail.hu" class="text-gray-300 hover:text-white transition-colors">FridgeSaverAI@protonmail.hu</a>
+                </div>
+            </div>
+
+            <p class="text-xs text-gray-600">© 2026 FridgeSaver AI. All rights reserved.</p>
         </div>
     </footer>
 
