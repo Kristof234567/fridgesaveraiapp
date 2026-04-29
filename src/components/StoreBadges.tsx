@@ -14,10 +14,9 @@ const StoreBadges = ({ className = "", badgeHeight = "h-11" }: StoreBadgesProps)
       <img src={googlePlayBadge} alt="Get it on Google Play" className={`${badgeHeight} w-auto`} />
     </a>
     <div className="relative">
-      <img src={appStoreBadge} alt="Download on the App Store" className={`${badgeHeight} w-auto opacity-60`} />
-      <span className="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[10px] font-medium text-muted-foreground whitespace-nowrap">
-        Coming Soon
-      </span>
+      <a href="https://apps.apple.com/hu/app/fridgesaver-ai/id6763292095" target="_blank" rel="noopener noreferrer nofollow">
+      <img src={appStoreBadge} alt="Download on the App Store" className={`${badgeHeight} w-auto`} />
+      </a>
     </div>
   </div>
 );
